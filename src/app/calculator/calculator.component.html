@@ -1,0 +1,12 @@
+<div class="calculator-wrapper">
+	<h4 class="calculator-title">A Simple Calculator</h4>
+	<hr>
+	<div class="calculator-content">
+		<div class="result-area">
+			<span> {{ result }}</span>
+		</div>
+		<div class="keys-area" *ngFor="let key of keys">
+			<button #btnData value='{{key}}' (click)="text(btnData.value)">{{ key }} </button>
+		</div>
+	</div>
+</div>
