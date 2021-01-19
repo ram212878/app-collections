@@ -3,10 +3,11 @@
 	<hr>
 	<div class="calculator-content">
 		<div class="result-area">
-			<span> {{ result }}</span>
+			<div class="history"> {{history}} </div>
+			<div class="result"> {{result}} </div>
 		</div>
-		<div class="keys-area" *ngFor="let key of keys">
-			<button #btnData value='{{key}}' (click)="text(btnData.value)">{{ key }} </button>
+		<div class="keys-area">
+			<button  *ngFor="let key of keys" #btnData class="btn" value='{{key}}' (click)="text(btnData.value)">{{ key }} </button>
 		</div>
 	</div>
 </div>
